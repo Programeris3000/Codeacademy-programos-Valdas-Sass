@@ -1,0 +1,47 @@
+@use 'mixin';
+
+.bg-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  background-image: url('/images/MicrosoftTeams-image.png');
+  margin-bottom: 30px;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+  padding: 31px 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mixin.xl {
+    background-size: 70%;
+  }
+
+  svg {
+    fill: #1200ff;
+  }
+
+  .link-text-wrapper {
+    @include mixin.l {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include mixin.s {
+      background-size: 120%;
+      padding-bottom: 250px;
+      background-position: 80% 100%;
+    }
+
+    .color-primary {
+      color: #ff00e9;
+    }
+
+    .color-black {
+      color: black;
+    }
+  }
+}
